@@ -5,8 +5,8 @@ pipeline {
         stage('build and deploy') {
             steps {
                 git branch: 'main', url: 'https://github.com/Satishganiyada/simple-python-application'
-                sh 'docker build -t python:v1 .'
-                sh 'docker compose up -d'
+                sh 'sudo docker build -t python:v1 .'
+                sh 'sudo docker compose up -d'
             }
         }
     }
